@@ -1,0 +1,15 @@
+.AlumniElement:hover {
+  box-shadow: 3px 2px 7px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.001);
+}
+.CapitalLetter {
+  text-transform: capitalize;
+}
+.fontaweButton {
+  padding: 0;
+  border: none;
+  background: none;
+}
+.fontaweButton:hover {
+  transform: scale(1.3);
+}
