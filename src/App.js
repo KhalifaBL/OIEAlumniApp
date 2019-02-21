@@ -51,30 +51,7 @@ class App extends Component {
       }
     ]
   };
-  createNotification = type => {
-    return () => {
-      switch (type) {
-        case "info":
-          NotificationManager.info("Info message");
-          break;
-        case "success":
-          NotificationManager.success("Success message", "Title here");
-          break;
-        case "warning":
-          NotificationManager.warning(
-            "Warning message",
-            "Close after 3000ms",
-            3000
-          );
-          break;
-        case "error":
-          NotificationManager.error("Error message", "Click me!", 5000, () => {
-            alert("callback");
-          });
-          break;
-      }
-    };
-  };
+
   /* this function is responsible for adding a new alumni to the table above
    It takes as parameter an " alumni" then add it to this state
    When it's passed in parameter in <AddAlumni>, <AddAlumni will take care
@@ -82,6 +59,10 @@ class App extends Component {
   addAlumni = alumni => {
     alumni.id = Math.floor(Math.random() * 10);
     let alumnis = [...this.state.alumnis, alumni];
+    NotificationManager.success(
+      alumni.name + " " + alumni.lastName + " has been added Successfully",
+      "Alumni Added"
+    );
     this.setState({
       alumnis: alumnis
     });
@@ -114,7 +95,17 @@ class App extends Component {
                   this.setState({
                     alumnis: alumnis
                   });
+
                   onClose();
+                  let deletedAlumni = this.state.alumnis.filter(alumni => {
+                    return alumni.id === id;
+                  });
+                  let nameText = deletedAlumni.map(alumni => {
+                    return alumni.name + " " + alumni.lastName;
+                  });
+                  NotificationManager.info(
+                    nameText + " has been deleted Successfully"
+                  );
                 }}
               >
                 Delete
@@ -155,7 +146,6 @@ class App extends Component {
             {/*MainTable is the element that contains all the buttons and the list of the alumnis*/}
             <div className="MainTable crop-bottom-right-corner">
               <h1 className="TableHeader"> List of ESU Alumni</h1>
-
               <div className="ButtonNavBar">
                 <div className="arrow">
                   <button className="fontaweButton ">
@@ -211,6 +201,8 @@ class App extends Component {
             )}
           </div>
         </div>
+
+        <NotificationContainer />
       </div>
     );
   }
