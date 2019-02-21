@@ -1,13 +1,26 @@
+* {
+  box-sizing: border-box;
+}
 .submit {
   font-weight: 600;
   width: 70%;
-  background-color: #8388a4;
+  background-color: transparent;
+  border-color: #c9a43b;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
   color: #0a0a0f;
   padding: 5px 15px;
-  border: none;
+  box-shadow: 0 0 5px 2px rgba(107, 82, 82, 0.2);
   float: left;
   cursor: pointer;
   margin-left: 18%;
+}
+.submit:hover {
+  background-color: white;
+  transform: scale(1.008);
+
+  color: #2d2d31;
 }
 .CancelButton:hover {
   transform: scale(1.01);
@@ -17,6 +30,14 @@
   width: 70%;
   float: right;
   margin-right: 15%;
+}
+.fromClosingWindow {
+  margin-left: 95%;
+  margin-top: 0;
+}
+.fromClosingWindow:hover {
+  transform: scale(1.1);
+  color: #bb8d0a;
 }
 .form-group {
   padding-left: 200px;
@@ -34,7 +55,7 @@
   background-color: #f2f2f2;
   margin-right: 2vh;
   margin-left: 1vh;
-  height: 330px;
+  height: 350px;
   box-shadow: 0 0 5px 2px rgba(107, 82, 82, 0.2);
   -webkit-animation: mymove 1500ms; /* Safari 4.0 - 8.0 */
   animation: mymove 1500mss;
@@ -48,7 +69,7 @@
   }
   to {
     padding-top: 30px;
-    height: 300px;
+    height: 350px;
   }
 }
 .lateForm {

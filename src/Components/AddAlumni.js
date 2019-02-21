@@ -20,6 +20,9 @@ class AddAlumni extends Component {
   render() {
     return (
       <div className="WrapperForm">
+        <div className="fromClosingWindow" onClick={this.props.closeForm}>
+          <i class="far fa-window-close" />
+        </div>
         <form className="lateForm" onSubmit={this.handleSubmit}>
           <div class="form-group">
             <label className="inputLabel" htmlFor="name">
