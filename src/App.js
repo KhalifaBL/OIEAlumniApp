@@ -9,6 +9,12 @@ import AddAlumni from "./Components/AddAlumni";
 // confirmAlert is for the popup for confirmation that the user want to delete an alumni
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
+//Notification when alumni is added
+import "react-notifications/lib/notifications.css";
+import {
+  NotificationContainer,
+  NotificationManager
+} from "react-notifications";
 
 class App extends Component {
   state = {
@@ -44,6 +50,30 @@ class App extends Component {
         id: 3
       }
     ]
+  };
+  createNotification = type => {
+    return () => {
+      switch (type) {
+        case "info":
+          NotificationManager.info("Info message");
+          break;
+        case "success":
+          NotificationManager.success("Success message", "Title here");
+          break;
+        case "warning":
+          NotificationManager.warning(
+            "Warning message",
+            "Close after 3000ms",
+            3000
+          );
+          break;
+        case "error":
+          NotificationManager.error("Error message", "Click me!", 5000, () => {
+            alert("callback");
+          });
+          break;
+      }
+    };
   };
   /* this function is responsible for adding a new alumni to the table above
    It takes as parameter an " alumni" then add it to this state
