@@ -2,18 +2,7 @@
   width: 100%;
   overflow-x: hidden;
 }
-.Alumni-Container {
-  background-color: rgba(255, 255, 255, 0.8);
-  height: 60%;
-  width: 100%;
-  margin: auto;
-  margin-top: 20px;
-}
-.Alumni-List {
-  height: 360px;
-  overflow: scroll;
-  overflow-x: hidden;
-}
+
 .MainTable {
   margin-top: 7vh;
   margin-right: 2vh;
@@ -113,15 +102,13 @@
   text-align: center;
   color: #e5e5ec;
 }
-.blur:hover {
-  filter: blur(3px);
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  -o-filter: blur(3px);
-  -ms-filter: blur(3px);
+.fake {
+  height: 300px;
+  width: 500px;
 }
-.addAlumniPopup {
-  width: 800px;
-  height: 400px;
-  background-color: green;
+.shownItem {
+  display: block;
+}
+.hiddenItem {
+  display: none;
 }

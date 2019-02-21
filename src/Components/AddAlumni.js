@@ -19,7 +19,7 @@ class AddAlumni extends Component {
 
   render() {
     return (
-      <div>
+      <div className="WrapperForm">
         <form onSubmit={this.handleSubmit}>
           <div class="form-group">
             <label htmlFor="name">Name:</label>

@@ -10,6 +10,7 @@ import "react-confirm-alert/src/react-confirm-alert.css";
 
 class App extends Component {
   state = {
+    showMe: false,
     alumnis: [
       {
         name: "ahmed",
@@ -48,7 +49,6 @@ class App extends Component {
       alumnis: alumnis
     });
   };
-
   deleteAlumni = id => {
     confirmAlert({
       customUI: ({ onClose }) => {
@@ -81,7 +81,11 @@ class App extends Component {
       }
     });
   };
-
+  HandleShowMe = () => {
+    this.setState({
+      showMe: !this.state.showMe
+    });
+  };
   render() {
     return (
       <div className="App">
@@ -92,7 +96,7 @@ class App extends Component {
             <Sidebar />
           </div>
           <div className="Core-App col-md-10">
-            <div className="MainTable ">
+            <div className="MainTable">
               <h1 className="TableHeader"> List of ESU Alumni</h1>
 
               <div className="ButtonNavBar">
@@ -101,7 +105,12 @@ class App extends Component {
                     <i class="fas fa-angle-double-right" />
                   </button>
                 </div>
-                <div className="AddButton">
+                <div
+                  onClick={() => {
+                    this.HandleShowMe();
+                  }}
+                  className="AddButton"
+                >
                   {" "}
                   Add Alumni <i class="fas fa-user-plus" />
                 </div>
@@ -133,7 +142,11 @@ class App extends Component {
                 </table>
               </div>
             </div>
-            <AddAlumni addAlumni={this.addAlumni} />
+            {this.state.showMe ? (
+              <AddAlumni addAlumni={this.addAlumni} />
+            ) : (
+              <div className="fake" />
+            )}
           </div>
         </div>
       </div>
