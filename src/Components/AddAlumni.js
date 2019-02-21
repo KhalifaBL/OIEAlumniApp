@@ -20,9 +20,11 @@ class AddAlumni extends Component {
   render() {
     return (
       <div className="WrapperForm">
-        <form onSubmit={this.handleSubmit}>
+        <form className="lateForm" onSubmit={this.handleSubmit}>
           <div class="form-group">
-            <label htmlFor="name">Name:</label>
+            <label className="inputLabel" htmlFor="name">
+              Name:
+            </label>
             <input
               className="inputForm form-control"
               type="text"
@@ -33,7 +35,9 @@ class AddAlumni extends Component {
             />
           </div>
           <div class="form-group">
-            <label htmlFor="name">Last Name:</label>
+            <label className="inputLabel" htmlFor="name">
+              Last Name:
+            </label>
             <input
               className="inputForm form-control"
               type="text"
@@ -44,7 +48,9 @@ class AddAlumni extends Component {
             />
           </div>
           <div class="form-group">
-            <label htmlFor="age">Graduation:</label>
+            <label className="inputLabel" htmlFor="age">
+              Graduation:
+            </label>
             <input
               className="inputForm form-control"
               type="date"
@@ -55,7 +61,7 @@ class AddAlumni extends Component {
             />
           </div>
           <div class="form-group">
-            <label type="age" htmlFor="age">
+            <label className="inputLabel" type="age" htmlFor="age">
               Age:
             </label>
             <input
@@ -68,7 +74,9 @@ class AddAlumni extends Component {
             />
           </div>
           <div class="form-group">
-            <label htmlFor="belt">Email:</label>
+            <label className="inputLabel" htmlFor="belt">
+              Email:
+            </label>
             <input
               className="inputForm form-control"
               type="text"

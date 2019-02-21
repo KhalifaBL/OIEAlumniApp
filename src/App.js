@@ -46,7 +46,8 @@ class App extends Component {
     alumni.id = Math.floor(Math.random() * 10);
     let alumnis = [...this.state.alumnis, alumni];
     this.setState({
-      alumnis: alumnis
+      alumnis: alumnis,
+      showMe: false
     });
   };
   deleteAlumni = id => {

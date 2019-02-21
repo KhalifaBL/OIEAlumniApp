@@ -112,3 +112,23 @@
 .hiddenItem {
   display: none;
 }
+.panel {
+  width: 200px;
+  height: 100px;
+  background: green;
+  margin-top: 10px;
+}
+
+.example-enter {
+  height: 0px;
+}
+
+.example-enter.example-enter-active {
+  height: 100px;
+  -webkit-transition: height 0.3s ease;
+}
+
+.example-leave.example-leave-active {
+  height: 0px;
+  -webkit-transition: height 0.3s ease;
+}
