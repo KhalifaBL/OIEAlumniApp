@@ -15,6 +15,15 @@ const Alumni = ({ alumniJsonList, deleteAlumni }) => {
           <td>{alumni.email}</td>
           <td>
             <button
+              className="editButton"
+              onClick={() => {
+                //editAlumni(alumni.id);
+              }}
+            >
+              <i class="fas fa-user-edit" />
+            </button>
+
+            <button
               className="fontaweButton"
               onClick={() => {
                 deleteAlumni(alumni.id);

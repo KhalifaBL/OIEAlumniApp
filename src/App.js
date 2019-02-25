@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-// Calling bootsrap
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
+// Calling bootsrap
 import Alumni from "./Components/Alumni";
 import Navbar from "./Components/Navbar";
 import Sidebar from "./Components/Sidebar";
-import "./App.css";
 import AddAlumni from "./Components/AddAlumni";
 // confirmAlert is for the popup for confirmation that the user want to delete an alumni
 import { confirmAlert } from "react-confirm-alert";
@@ -123,6 +123,10 @@ class App extends Component {
       showMe: !this.state.showMe
     });
   };
+
+  cssLoading = () => {
+    document.body.style.visibility = "visible";
+  };
   /*
    *******************************************************************
    *******************************************************************
@@ -133,7 +137,7 @@ class App extends Component {
      all the components that we just created */
   render() {
     return (
-      <div className="App">
+      <div className="App ">
         <Navbar />
 
         <div className="row both-sides">
@@ -169,7 +173,7 @@ class App extends Component {
                 </div>
               </div>
 
-              <div className="table-responsive">
+              <div className="table ">
                 <table className="table table-striped">
                   <thead>
                     <tr>

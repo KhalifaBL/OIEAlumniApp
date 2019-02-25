@@ -11,12 +11,13 @@
   margin-right: 2vh;
   margin-left: 1vh;
   background-color: white;
-  overflow: scroll;
+  overflow-y: scroll;
   height: 300px;
   overflow-x: hidden;
+  position: relative;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
 }
-
+/* Header Alumni-table css*/
 .TableHeader {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   margin: 5px;
@@ -55,6 +56,8 @@
 .AddButton:hover {
   color: rgb(235, 228, 228);
 }
+
+/* Deletion confirmation pop up- */
 .popup {
   width: 400px;
   height: 125px;
@@ -102,7 +105,9 @@
   text-align: center;
   color: #e5e5ec;
 }
+/* To occupy the place of the form while it's hidden*/
 .fake {
   height: 300px;
   width: 500px;
 }
+/* Scrollbar design*/

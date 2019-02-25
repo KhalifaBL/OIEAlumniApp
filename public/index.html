@@ -9,12 +9,6 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="path/to/react-notifications/dist/react-notifications.css"
-    />
-    <script src="path/to/react-notifications/dist/react-notifications.js"></script>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -36,7 +30,7 @@
     -->
     <title>OIE Alumni Management App</title>
   </head>
-  <body>
+  <body style="visibility: hidden;" onload="js_Load()">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -50,4 +44,9 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    function js_Load() {
+      document.body.style.visibility = "visible";
+    }
+  </script>
 </html>

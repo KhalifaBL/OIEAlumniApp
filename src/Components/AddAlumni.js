@@ -1,5 +1,5 @@
-import React, { Component } from "react";
 import "./AddAlumni.css";
+import React, { Component } from "react";
 class AddAlumni extends Component {
   state = {
     name: null,
@@ -15,15 +15,19 @@ class AddAlumni extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.addAlumni(this.state);
+    this.resetForm();
+  };
+  resetForm = () => {
+    document.getElementById("reset-form").reset();
   };
 
   render() {
     return (
       <div className="WrapperForm">
-        <div className="fromClosingWindow" onClick={this.props.closeForm}>
+        <div className="formClosingWindow" onClick={this.props.closeForm}>
           <i class="far fa-window-close" />
         </div>
-        <form className="lateForm" onSubmit={this.handleSubmit}>
+        <form id="reset-form" className="lateForm" onSubmit={this.handleSubmit}>
           <div class="form-group">
             <label className="inputLabel" htmlFor="name">
               Name:

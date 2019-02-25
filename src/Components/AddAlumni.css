@@ -31,13 +31,14 @@
   float: right;
   margin-right: 15%;
 }
-.fromClosingWindow {
+.formClosingWindow {
   margin-left: 95%;
   margin-top: 0;
 }
-.fromClosingWindow:hover {
+.formClosingWindow:hover {
   transform: scale(1.1);
   color: #bb8d0a;
+  cursor: pointer;
 }
 .form-group {
   padding-left: 200px;
